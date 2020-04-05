@@ -1,5 +1,7 @@
 # COVID19
 
+[Online application](https://shiny.cnam.fr/CoVid19/) hosted by the [CNAM](http://www.cnam.fr/).
+
 ## Data
 
 * My Shiny app depends on https://github.com/CSSEGISandData/COVID-19
