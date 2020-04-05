@@ -55,7 +55,7 @@ shinyUI(fluidPage(
                         tabPanel("Waiting for the peak",
                                  br(),
                                  p("Daily cases/deaths normalised by the population of a country
-                                    and smoothed. Note there's a lag when one switches from confirmed
+                                    and smoothed (per thousand people). Note there's a lag when one switches from confirmed
                                     cases to number of deaths."),
                                  plotOutput("peakPlot"),
                                  p("Suggestion (1): copy “Italy,Spain,UK,US,Germany” in the country filter.",
