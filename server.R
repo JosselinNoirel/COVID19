@@ -1,40 +1,40 @@
 library("shiny")
 
-log_level = 1 # 0: Print nothing
-log_out = list(h3("Debug"))
-log_add = function (str, level=1) {
-    if (log_level >= level) {
-        log_out[[length(log_out) + 1]] <<- p(paste(level, ":", str))
-    }
-}
+# log_level = 1 # 0: Print nothing
+# log_out = list(h3("Debug"))
+# log_add = function (str, level=1) {
+#     if (log_level >= level) {
+#         log_out[[length(log_out) + 1]] <<- p(paste(level, ":", str))
+#     }
+# }
 
-log_add("Package 'shiny' loaded!")
+# log_add("Package 'shiny' loaded!")
 
 library("shinyWidgets") # devtools::install_github("dreamRs/shinyWidgets")
 
-log_add("Package 'shiny' loaded")
+# log_add("Package 'shiny' loaded")
 
 library("ggrepel")      # install.packages("ggrepel")
 
-log_add("Package 'ggrepel' loaded")
+# log_add("Package 'ggrepel' loaded")
 
 library("tidyverse")
 
-log_add("Package 'tidyverse' loaded")
+# log_add("Package 'tidyverse' loaded")
 
 library("lubridate")
 
-log_add("Package 'lubridate' loaded")
+# log_add("Package 'lubridate' loaded")
 
 library("DT")
 
-log_add("Package 'DT' loaded")
+# log_add("Package 'DT' loaded")
 
 theme_set(theme_bw() + theme(panel.border=element_blank()))
 
 populations = read_rds("populations.rds")
 
-log_add("Populations loaded")
+# log_add("Populations loaded")
 
 today = function () "2020-04-06"
 
@@ -44,7 +44,7 @@ ma = function(x, n=5) as.numeric(stats::filter(x, rep(1/n, n), sides=2))
 
 if (file.exists(src)) {
     dat = read_rds(src)
-    log_add("Reading the RDS data")
+    # log_add("Reading the RDS data")
 }
 
 if (FALSE && ! file.exists(src)) {
@@ -88,11 +88,11 @@ if (FALSE && ! file.exists(src)) {
 country_list = (dat[[2]] %>% filter(Date == dmy("15-03-2020") & Value > 40))$Country
 country_list = setdiff(country_list, "Others")
 
-log_add("Country list OK")
+# log_add("Country list OK")
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
-    output$log = renderUI(tagList(log_out))
+    # output$log = renderUI(tagList(log_out))
 
     output$cumPlot = renderPlot({
         if (str_starts(input$countries, "-")) {
