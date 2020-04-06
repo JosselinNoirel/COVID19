@@ -2,9 +2,16 @@
 
 [Online application](https://shiny.cnam.fr/CoVid19/) hosted by the [CNAM](http://www.cnam.fr/).
 
+This work is licensed under a [Creative Commons Attribution 4.0 International
+License][by-nc-sa].
+
+[![CC BY 4.0][by-nc-sa-image]][by-nc-sa]
+
+[by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[by-nc-sa-image]: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
 ## Data
 
-* My Shiny app depends on https://github.com/CSSEGISandData/COVID-19
+* This Shiny app depends on the [data provided by the JHU Center for Systems Science and Engineering](https://github.com/CSSEGISandData/COVID-19)
 
 *
 https://www.ecdc.europa.eu/en/publications-data/download-todays-data-geographic-distribution-covid-19-cases-worldwide
