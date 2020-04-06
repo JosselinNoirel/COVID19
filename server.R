@@ -95,46 +95,44 @@ shinyServer(function(input, output) {
     output$log = renderUI(tagList(log_out))
 
     output$cumPlot = renderPlot({
-        plot(mpg ~ qsec, data=mtcars)
+        if (str_starts(input$countries, "-")) {
+            selfn = setdiff
+            input_countries = substring(input$countries, 2)
+        } else {
+            selfn = intersect
+            input_countries = input$countries
+        }
+        cl = strsplit(input_countries, ',')[[1]]
 
-        # if (str_starts(input$countries, "-")) {
-        #     selfn = setdiff
-        #     input_countries = substring(input$countries, 2)
-        # } else {
-        #     selfn = intersect
-        #     input_countries = input$countries
-        # }
-        # cl = strsplit(input_countries, ',')[[1]]
-        #
-        # if (length(cl) == 0) {
-        #     cl = country_list
-        # } else {
-        #     cl = selfn(country_list, cl)
-        # }
-        #
-        # x = dat[[input$what]] %>% filter(Country %in% cl & Value > input$min)
-        #
-        # p = ggplot(x,
-        #            aes(Date, Value, colour=Country)) +
-        #     geom_point(size=1, alpha=(if (input$predict) 0.5 else 1)) +
-        #     geom_line(size=1, alpha=(if (input$predict) 0.5 else 1)) +
-        #     coord_cartesian(clip="off") +
-        #     (if (input$log) scale_y_log10() else NULL) +
-        #     (if (input$predict)
-        #         geom_smooth(data=subset(x, Date > today() - 10),
-        #                     method="lm", se=FALSE) else NULL) +
-        #     geom_text_repel(data=subset(x, Date == max(x$Date)),
-        #                     aes(label=Country, colour=Country, x=Date, y=Value),
-        #                     xlim=c(min(x$Date), max(x$Date) + 14),
-        #                     segment.size=0.1,
-        #                     direction="y",
-        #                     nudge_x = 1,
-        #                     hjust = 0) +
-        #     ylab(NULL) + xlab(NULL) +
-        #     theme(plot.margin=unit(c(0,2,1,0), "in"),
-        #           legend.position="none")
-        #
-        # p
+        if (length(cl) == 0) {
+            cl = country_list
+        } else {
+            cl = selfn(country_list, cl)
+        }
+
+        x = dat[[input$what]] %>% filter(Country %in% cl & Value > input$min)
+
+        p = ggplot(x,
+                   aes(Date, Value, colour=Country)) +
+            geom_point(size=1, alpha=(if (input$predict) 0.5 else 1)) +
+            geom_line(size=1, alpha=(if (input$predict) 0.5 else 1)) +
+            coord_cartesian(clip="off") +
+            (if (input$log) scale_y_log10() else NULL) +
+            (if (input$predict)
+                geom_smooth(data=subset(x, Date > today() - 10),
+                            method="lm", se=FALSE) else NULL) +
+            geom_text_repel(data=subset(x, Date == max(x$Date)),
+                            aes(label=Country, colour=Country, x=Date, y=Value),
+                            xlim=c(min(x$Date), max(x$Date) + 14),
+                            segment.size=0.1,
+                            direction="y",
+                            nudge_x = 1,
+                            hjust = 0) +
+            ylab(NULL) + xlab(NULL) +
+            theme(plot.margin=unit(c(0,2,1,0), "in"),
+                  legend.position="none")
+
+        p
     })
 
     output$peakPlot = renderPlot({
