@@ -1,40 +1,16 @@
 library("shiny")
-
-# log_level = 1 # 0: Print nothing
-# log_out = list(h3("Debug"))
-# log_add = function (str, level=1) {
-#     if (log_level >= level) {
-#         log_out[[length(log_out) + 1]] <<- p(paste(level, ":", str))
-#     }
-# }
-
-# log_add("Package 'shiny' loaded!")
-
 library("shinyWidgets") # devtools::install_github("dreamRs/shinyWidgets")
-
-# log_add("Package 'shiny' loaded")
-
 library("ggrepel")      # install.packages("ggrepel")
-
-# log_add("Package 'ggrepel' loaded")
-
 library("tidyverse")
-
-# log_add("Package 'tidyverse' loaded")
-
 library("lubridate")
-
-# log_add("Package 'lubridate' loaded")
-
 library("DT")
+library("shinyEventLogger")
 
-# log_add("Package 'DT' loaded")
+set_logging(file=TRUE)
 
 theme_set(theme_bw() + theme(panel.border=element_blank()))
 
 populations = read_rds("populations.rds")
-
-# log_add("Populations loaded")
 
 today = function () "2020-04-06"
 
