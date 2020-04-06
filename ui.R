@@ -49,6 +49,7 @@ shinyUI(fluidPage(
 
         mainPanel(
             tabsetPanel(type="tabs",
+                        tabPanel("Log", br(), uiOutput("log")),
                         tabPanel("Cumulative counts",
                                  br(),
                                  plotOutput("cumPlot")),
