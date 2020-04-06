@@ -194,25 +194,23 @@ shinyServer(function(input, output) {
     })
 
     output$stats = renderDataTable({
-        datatable(mtcars)
+        if (str_starts(input$countries, "-")) {
+            selfn = setdiff
+            input_countries = substring(input$countries, 2)
+        } else {
+            selfn = intersect
+            input_countries = input$countries
+        }
+        cl = strsplit(input_countries, ',')[[1]]
 
-        # if (str_starts(input$countries, "-")) {
-        #     selfn = setdiff
-        #     input_countries = substring(input$countries, 2)
-        # } else {
-        #     selfn = intersect
-        #     input_countries = input$countries
-        # }
-        # cl = strsplit(input_countries, ',')[[1]]
-        #
-        # if (length(cl) == 0) {
-        #     cl = country_list
-        # } else {
-        #     cl = selfn(country_list, cl)
-        # }
-        #
-        # dat[[input$what]] %>% filter(Country %in% cl & Value > input$min) %>%
-        #     arrange(Country, Date) %>%
-        #     datatable()
+        if (length(cl) == 0) {
+            cl = country_list
+        } else {
+            cl = selfn(country_list, cl)
+        }
+
+        dat[[input$what]] %>% filter(Country %in% cl & Value > input$min) %>%
+            arrange(Country, Date) %>%
+            datatable()
     })
 })
