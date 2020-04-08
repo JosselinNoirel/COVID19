@@ -9,7 +9,7 @@
     {
       "short": "Intro_paragraph",
       "en": "How many people have been infected or have died as a result of the COVID19 pandemic; how many people have recovered from the disease. (Note that testing procedures and policies vary from country to country. France, in particular, only recently started to include statistics from nursing homes.)",
-      "fr": "Combien de personnes ont été infectées, ont guéri ou sont mortes dans l'épidémie COVID19. (Noter que chaque pays possède sa propre politique de dépistage et de communication rendant délicates la lecture et l'interprétation de ces nombres.)"
+      "fr": "Combien de personnes ont été infectées, ont guéri ou sont mortes dans l'épidémie COVID19. (Noter que chaque pays possède sa propre politique de dépistage et de communication rendant délicates la lecture et l'interprétation de ces données.)"
     },
     {
       "short": "Title",
@@ -53,7 +53,7 @@
     },
     {
       "short": "Threshold_paragraph",
-      "en": "Filter the data to focus on periods of time when counts have reached a certain threshold. Increase the value to reduce noise.",
+      "en": "Filter the data to focus on periods of time and countries for which counts have reached a certain threshold. Increase the value to reduce noise.",
       "fr": "Filtrer les données pour n'inclure que celles ayant atteint un certain seuil : augmenter la valeur pour réduire le bruit."
     },
     {
@@ -94,12 +94,12 @@
     {
       "short": "Cumplot_explanation",
       "en": "The log-scale is recommended to look at this graph since it makes exponential growth look linear; immunity and political intervention can and should eventually bend the curve downwards. This graph allows us to check how many people have been affected by the disease in a country.",
-      "fr": "L'échelle logarithmique est recommandée pour examiner ce graphique puisque la transmission exponentielle se traduit par des segments de droite. L'immunité et les interventions politiques comme le confindement peuvent à terme conduire à un infléchissement de la courbe.  Ce graphique permet de prendre conscience du nombre de peronnes touchées par l'épidémie dans chaque pays."
+      "fr": "L'échelle logarithmique est recommandée pour examiner ce graphique puisque la transmission exponentielle se traduit par des segments de droite. L'immunité et les interventions politiques comme le confinement peuvent à terme conduire à un infléchissement de la courbe.  Ce graphique permet de prendre conscience du nombre de personnes touchées par l'épidémie dans chaque pays."
     },
     {
       "short": "Peakplot_explanation",
       "en": "Daily cases/deaths normalised by the population of a country and smoothed (per thousand people). This curves allows us to check whether the rate at which the disease is progressing is increasing or receding. Although comparisons between countries are difficult, the trends shown here should be reasonably robust. The number of deaths may be a better indicator of bed and ICU occupancy in hospitals. Finally, note that normalisation by population flattens the curve for very large countries and that log-scale is deactivated as linear works better here.",
-      "fr": "Nombre de nouveaux cas/décès journaliers noramlisé par la population de chaque pays. L'unité de l'axe des ordonnées est par millier d'habitants. Cette courbe permet d'évaluer la vitesse de progression de la maladie et un pic apparaît lorsqu'elle s'essouffle. Les comparaisons entre pays restent délicates mais la présence du pic dépend uniquement d'une politique de dépistage constant. Le nombre de décès pourrait bien offrir un indicateur plus robuste et notamment une meilleure indication du taux de remplissage des hôpitaux. Enfin, la normalisation par la population produit des courbes très plates pour les grands pays (notamment la Chine, l'Inde)."
+      "fr": "Nombre de nouveaux cas/décès journaliers normalisé par la population de chaque pays. L'unité de l'axe des ordonnées est par millier d'habitants. Cette courbe permet d'évaluer la vitesse de progression de la maladie et un pic apparaît lorsqu'elle s'essouffle. Les comparaisons entre pays restent délicates mais la présence du pic dépend uniquement d'une politique de dépistage constant. Le nombre de décès pourrait bien offrir un indicateur plus robuste et notamment une meilleure indication du taux de remplissage des hôpitaux. Enfin, la normalisation par la population produit des courbes très plates pour les grands pays (notamment la Chine, l'Inde)."
     },
     {
       "short": "Table_explanation",
