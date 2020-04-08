@@ -2,13 +2,11 @@ COVID19
 ================
 
 [Online application](https://shiny.cnam.fr/CoVid19/) hosted by the
-[Conservatoire national des arts et métiers](http://www.cnam.fr/).
-
+[Conservatoire national des arts et métiers](http://www.cnam.fr/)
+<a href="http://www.cnam.fr/"><img src="./lecnamlogo.jpg" width="80px" /></a>.
 This work is licensed under a [Attribution-NonCommercial-ShareAlike 4.0
 International
-License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-[![CC
+License](http://creativecommons.org/licenses/by-nc-sa/4.0/) [![CC
 BY 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Data
@@ -61,11 +59,9 @@ dat = rio::import(dat_URL)
     [lubridate](https://CRAN.R-project.org/package=lubridate) —
     [shiny](https://CRAN.R-project.org/package=shiny) —
     [shinyWidgets](https://CRAN.R-project.org/package=shinyWidgets) —
-    [tidyverse](https://CRAN.R-project.org/package=tidyverse).
-
-  - The
+    [tidyverse](https://CRAN.R-project.org/package=tidyverse). The
     [shinyEventLogger](https://CRAN.R-project.org/package=shinyEventLogger)
-    package
+    package has been useful during development.
 
   - RStudio’s articles on [Debugging Shiny
     applications](https://shiny.rstudio.com/articles/debugging.html) and
@@ -79,3 +75,6 @@ dat = rio::import(dat_URL)
   - The [lead and
     lag](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/lead-lag)
     functions from dplyr
+
+  - I am grateful to Rafik Abdesselam for the help in getting this
+    application online

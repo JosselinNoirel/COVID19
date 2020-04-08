@@ -8,11 +8,8 @@ knitr::opts_chunk$set(echo=TRUE, comment=NULL)
 ```
 
 [Online application](https://shiny.cnam.fr/CoVid19/) hosted by the
-[Conservatoire national des arts et métiers](http://www.cnam.fr/).
-
-This work is licensed under a [Attribution-NonCommercial-ShareAlike 4.0 International License][by-nc-sa].
-
-[![CC BY 4.0][by-nc-sa-image]][by-nc-sa]
+[Conservatoire national des arts et métiers](http://www.cnam.fr/)
+<a href="http://www.cnam.fr/"><img src="./lecnamlogo.jpg" width="80px" /></a>. This work is licensed under a [Attribution-NonCommercial-ShareAlike 4.0 International License][by-nc-sa] [![CC BY 4.0][by-nc-sa-image]][by-nc-sa]
 
 ## Data
 
@@ -54,15 +51,15 @@ dat = rio::import(dat_URL)
 [lubridate](https://CRAN.R-project.org/package=lubridate) —
 [shiny](https://CRAN.R-project.org/package=shiny) —
 [shinyWidgets](https://CRAN.R-project.org/package=shinyWidgets) —
-[tidyverse](https://CRAN.R-project.org/package=tidyverse).
-
-* The [shinyEventLogger](https://CRAN.R-project.org/package=shinyEventLogger) package
+[tidyverse](https://CRAN.R-project.org/package=tidyverse). The [shinyEventLogger](https://CRAN.R-project.org/package=shinyEventLogger) package has been useful during development.
 
 * RStudio's articles on [Debugging Shiny applications](https://shiny.rstudio.com/articles/debugging.html) and [Shiny server error logs](https://support.rstudio.com/hc/en-us/articles/115003717168-Shiny-Server-Error-Logs)
 
 * [How to use SliderInput for dates](https://stackoverflow.com/questions/40908808/how-to-sliderinput-for-dates) on Stackoverflow
 
 * The [lead and lag](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/lead-lag) functions from dplyr
+
+* I am grateful to Rafik Abdesselam for his help getting this application online
 
 [by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [by-nc-sa-image]: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
