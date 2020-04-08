@@ -126,7 +126,7 @@ shinyServer(function(input, output) {
                       nudge_x = 1,
                       hjust = 0) +
             ylab(NULL) + xlab(NULL) +
-            theme(plot.margin=unit(c(0,1,1,0), "in"),
+            theme(plot.margin=unit(c(0.1,1,0.1,0.1), "in"),
                   legend.position="none")
 
         p
@@ -190,7 +190,7 @@ shinyServer(function(input, output) {
                             hjust = 0) +
             ylab(NULL) + xlab(NULL) +
             coord_cartesian(clip="off") +
-            theme(plot.margin=unit(c(0,1,1,0), "in"),
+            theme(plot.margin=unit(c(0.1,1,0.1,0.1), "in"),
                   legend.position="none")
 
         p
@@ -224,6 +224,10 @@ shinyServer(function(input, output) {
     output$content = renderUI({
         TODAY = max(dat[[1]]$Date)
         tagList(
+            # setBackgroundColor(""),
+            tags$head(tags$style('h1, h2, h3, .control-label {color: #857761;}')),
+            setSliderColor(rep("#c1002a", 5), 1:5),
+            chooseSliderSkin(skin="Flat"),
             selectInput('selected_language',
                         i18n()$t("Language"),
                         choices=c("en", "fr"),
