@@ -1,0 +1,110 @@
+{
+  "languages": ["short", "en", "fr"],
+  "translation": [
+    {
+      "short": "Language",
+      "en": "Language",
+      "fr": "Langue"
+    },
+    {
+      "short": "Intro_paragraph",
+      "en": "How many people have been infected or have died as a result of the COVID19 pandemic; how many people have recovered from the disease. (Note that testing procedures and policies vary from country to country. France, in particular, only recently started to include statistics from nursing homes.)",
+      "fr": "Combien de personnes ont été infectées, ont guéri ou sont mortes dans l'épidémie COVID19. (Noter que chaque pays possède sa propre politique de dépistage et de communication rendant délicates la lecture et l'interprétation de ces nombres.)"
+    },
+    {
+      "short": "Title",
+      "en": "Plotting the SARS-Cov-2 (COVID19) Pandemic",
+      "fr": "Évolution de l'épidémie SARS-Cov-2 (COVID19)"
+    },
+    {
+      "short": "What",
+      "en": "What are we counting",
+      "fr": "Que représenter"
+    },
+    {
+      "short": "Cumulative counts",
+      "en": "Cumulative counts",
+      "fr": "Statistiques cumulées"
+    },
+    {
+      "short": "Confirmed cases",
+      "en": "Confirmed cases",
+      "fr": "Cas confirmés"
+    },
+    {
+      "short": "Deaths",
+      "en": "Deaths",
+      "fr": "Morts"
+    },
+    {
+      "short": "Recovered",
+      "en": "Recovered",
+      "fr": "Remis"
+    },
+    {
+      "short": "Country_paragraph",
+      "en": "Filter countries to focus on a specific group using a comma-separated list. If the first character of the list is a dash, then the countries are excluded from the analysis.",
+      "fr": "On peut se concentrer sur un groupe de pays en donnant une liste de pays séparés par des virgules ; si le champ commence par un tiret « - », les pays sont exclus de l'analyse."
+    },
+    {
+      "short": "Filter countries",
+      "en": "Filter countries",
+      "fr": "Sélectionner des pays (en anglais)"
+    },
+    {
+      "short": "Threshold_paragraph",
+      "en": "Filter the data to focus on periods of time when counts have reached a certain threshold. Increase the value to reduce noise.",
+      "fr": "Filtrer les données pour n'inclure que celles ayant atteint un certain seuil : augmenter la valeur pour réduire le bruit."
+    },
+    {
+      "short": "Minimal count",
+      "en": "Minimal count",
+      "fr": "Seuil"
+    },
+    {
+      "short": "Log_paragraph",
+      "en": "We generally want to look at those things on a log-scale for cumulative counts. This makes it easier for instance to eyeball how long it takes cumulative counts to be multipled by 10, for instance.",
+      "fr": "Généralement, une échelle logarithmique est souhaitable pour les statistiques cumulées. Elle permet de mesurer le temps qu'il faut pour que le nombre de cas soit multiplié par 10, par exemple."
+    },
+    {
+      "short": "Log-scale",
+      "en": "Log-scale",
+      "fr": "Échelle logarithmique"
+    },
+    {
+      "short": "Regression_paragraph",
+      "en": "Linear regression for a 10-day trend; this gives a simple visual indicator (the slope) of how fast the disease is being transmitted.",
+      "fr": "Régression linéaire sur les 10 derniers jours ; la pente de la régression permet d'apprécier visuellement la transmission du virus"
+    },
+    {
+      "short": "Slope",
+      "en": "Slope",
+      "fr": "Pente de la courbe"
+    },
+    {
+      "short": "Table",
+      "en": "Table",
+      "fr": "Tableau"
+    },
+    {
+      "short": "Waiting for the peak",
+      "en": "Waiting for the peak",
+      "fr": "À quand le pic"
+    },
+    {
+      "short": "Cumplot_explanation",
+      "en": "The log-scale is recommended to look at this graph since it makes exponential growth look linear; immunity and political intervention can and should eventually bend the curve downwards. This graph allows us to check how many people have been affected by the disease in a country.",
+      "fr": "L'échelle logarithmique est recommandée pour examiner ce graphique puisque la transmission exponentielle se traduit par des segments de droite. L'immunité et les interventions politiques comme le confindement peuvent à terme conduire à un infléchissement de la courbe.  Ce graphique permet de prendre conscience du nombre de peronnes touchées par l'épidémie dans chaque pays."
+    },
+    {
+      "short": "Peakplot_explanation",
+      "en": "Daily cases/deaths normalised by the population of a country and smoothed (per thousand people). This curves allows us to check whether the rate at which the disease is progressing is increasing or receding. Although comparisons between countries are difficult, the trends shown here should be reasonably robust. The number of deaths may be a better indicator of bed and ICU occupancy in hospitals. Finally, note that normalisation by population flattens the curve for very large countries and that log-scale is deactivated as linear works better here.",
+      "fr": "Nombre de nouveaux cas/décès journaliers noramlisé par la population de chaque pays. L'unité de l'axe des ordonnées est par millier d'habitants. Cette courbe permet d'évaluer la vitesse de progression de la maladie et un pic apparaît lorsqu'elle s'essouffle. Les comparaisons entre pays restent délicates mais la présence du pic dépend uniquement d'une politique de dépistage constant. Le nombre de décès pourrait bien offrir un indicateur plus robuste et notamment une meilleure indication du taux de remplissage des hôpitaux. Enfin, la normalisation par la population produit des courbes très plates pour les grands pays (notamment la Chine, l'Inde)."
+    },
+    {
+      "short": "Table_explanation",
+      "en": "Table with the raw data.",
+      "fr": "Données brutes."
+    }
+  ]
+}

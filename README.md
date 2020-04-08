@@ -59,6 +59,7 @@ dat = rio::import(dat_URL)
     [lubridate](https://CRAN.R-project.org/package=lubridate) —
     [shiny](https://CRAN.R-project.org/package=shiny) —
     [shinyWidgets](https://CRAN.R-project.org/package=shinyWidgets) —
+    [shiny.i18n](https://CRAN.R-project.org/package=shiny.i18n) —
     [tidyverse](https://CRAN.R-project.org/package=tidyverse). The
     [shinyEventLogger](https://CRAN.R-project.org/package=shinyEventLogger)
     package has been useful during development.
@@ -72,9 +73,16 @@ dat = rio::import(dat_URL)
     dates](https://stackoverflow.com/questions/40908808/how-to-sliderinput-for-dates)
     on Stackoverflow
 
+  - How to internationalise your Shiny application: [shiny.18n
+    examples](https://rdrr.io/github/Appsilon/shiny.i18n/src/inst/examples/live_language_change/app.R),
+    [Internationalisation of Shiny apps has never been
+    easier](https://appsilon.com/internationalization-of-shiny-apps-i18n/)
+    and [use selectInput with
+    shiny.i18n](https://github.com/Appsilon/shiny.i18n/issues/27)
+
   - The [lead and
     lag](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8/topics/lead-lag)
     functions from dplyr
 
-  - I am grateful to Rafik Abdesselam for the help in getting this
+  - I am grateful to Rafik Abdesselam for his help getting this
     application online

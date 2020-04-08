@@ -1,13 +1,18 @@
 library("shiny")
+library("shiny.i18n")
 library("shinyWidgets") # devtools::install_github("dreamRs/shinyWidgets")
 library("ggrepel")      # install.packages("ggrepel")
 library("tidyverse")
 library("lubridate")
 library("DT")
 
-theme_set(theme_bw() +
-              theme(panel.border=element_blank())
-)
+# Settings: Italy,Spain,UK,US,Germany
+#           China,South Korea,Japan
+
+translator = Translator$new(translation_json_path = "translation.json")
+translator$set_translation_language("en")
+
+theme_set(theme_bw() + theme(panel.border=element_blank()))
 
 populations = read_rds("populations.rds")
 
@@ -58,8 +63,14 @@ if (file.exists(src)) {
 country_list = (dat[[2]] %>% filter(Date == dmy("15-03-2020") & Value > 40))$Country
 country_list = setdiff(country_list, "Others")
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
+    i18n = reactive({
+        selected = input$selected_language
+        if (length(selected) > 0 && selected %in% translator$languages)
+            translator$set_translation_language(selected)
+        translator
+    })
+
     output$cumPlot = renderPlot({
         if (str_starts(input$countries, "-")) {
             selfn = setdiff
@@ -178,5 +189,77 @@ shinyServer(function(input, output) {
         dat[[input$what]] %>% filter(Country %in% cl & Value > input$min) %>%
             arrange(Country, Date) %>%
             datatable()
+    })
+
+    output$content = renderUI({
+        tagList(
+            selectInput('selected_language',
+                        i18n()$t("Language"),
+                        choices=c("en", "fr"),
+                        selected=input$selected_language),
+            titlePanel(i18n()$t("Title")),
+            p(i18n()$t("Intro_paragraph")),
+
+            sidebarLayout(
+                sidebarPanel(
+                    selectInput("what", i18n()$t("What"),
+                                c("confirmed", "deceased", "recovered") %>%
+                                    stats::setNames(c(i18n()$t("Confirmed cases"),
+                                                    i18n()$t("Deaths"),
+                                                    i18n()$t("Recovered")))),
+
+                    p(i18n()$t("Country_paragraph")),
+
+                    textInput("countries", i18n()$t("Filter countries"),
+                              value="-China,South Korea,Diamond Princess"),
+
+                    p(i18n()$t("Threshold_paragraph")),
+
+                    shinyWidgets::sliderTextInput("min", i18n()$t("Minimal count"),
+                                                  choices=c(10, 20, 50,
+                                                            100, 200, 500,
+                                                            1000, 2000, 5000,
+                                                            10000, 20000, 50000,
+                                                            100000, 200000, 500000),
+                                                  selected=10000, grid=TRUE),
+
+                    p(i18n()$t("Log_paragraph")),
+
+                    checkboxInput("log", i18n()$t("Log-scale"), value=TRUE),
+
+                    p(i18n()$t("Regression_paragraph")),
+
+                    checkboxInput("predict", i18n()$t("Slope"), value=FALSE),
+
+                    width=6 # Options
+                ),
+
+                mainPanel(
+                    tabsetPanel(type="tabs",
+                                tabPanel(i18n()$t("Cumulative counts"),
+                                         br(),
+                                         p(i18n()$t("Cumplot_explanation")),
+                                         plotOutput("cumPlot")),
+                                tabPanel(i18n()$t("Waiting for the peak"),
+                                         br(),
+                                         p(i18n()$t("Peakplot_explanation")),
+                                         plotOutput("peakPlot")),
+                                tabPanel(i18n()$t("Table"),
+                                         br(),
+                                         p(i18n()$t("Table_explanation")),
+                                         DT::dataTableOutput("stats"))),
+                    width=6
+                )
+            ),
+
+            p("This Shiny application relies on the ",
+              a("2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository
+         by Johns Hopkins CSSE",
+                href="https://github.com/CSSEGISandData/COVID-19"), "."),
+
+            p("Find the code for this app at ",
+              a("JosselinNoirel/COVID19", href="https://github.com/JosselinNoirel/COVID19/"),
+              " on GitHub.")
+        )
     })
 })
