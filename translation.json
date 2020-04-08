@@ -8,8 +8,8 @@
     },
     {
       "short": "Intro_paragraph",
-      "en": "How many people have been infected or have died as a result of the COVID19 pandemic; how many people have recovered from the disease. (Note that testing procedures and policies vary from country to country. France, in particular, only recently started to include statistics from nursing homes.)",
-      "fr": "Combien de personnes ont été infectées, ont guéri ou sont mortes dans l'épidémie COVID19. (Noter que chaque pays possède sa propre politique de dépistage et de communication rendant délicates la lecture et l'interprétation de ces données.)"
+      "en": "How many people have been infected or have died as a result of the COVID19 pandemic; how many people have recovered from the disease. (Note that testing procedures and policies vary from country to country. France, in particular, only recently started to include statistics from nursing homes; Switzerland has changed its testing policy on 6 March.)",
+      "fr": "Combien de personnes ont été infectées, ont guéri ou sont mortes dans l'épidémie COVID19. (Noter que chaque pays possède sa propre politique de dépistage et de communication rendant délicates la lecture et l'interprétation de ces données. Par exemple, la France n'a pas immédiatement inclus les données d'EHPAD et la Suisse a décidé depuis le 6 mars changer sa stratégie de dépistage.)"
     },
     {
       "short": "Title",

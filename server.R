@@ -1,3 +1,5 @@
+# Packages ----
+
 library("shiny")
 library("shiny.i18n")
 library("shinyWidgets") # devtools::install_github("dreamRs/shinyWidgets")
@@ -6,39 +8,48 @@ library("tidyverse")
 library("lubridate")
 library("DT")
 
-# Settings: Italy,Spain,UK,US,Germany
-#           China,South Korea,Japan
+theme_set(theme_bw() + theme(panel.border=element_blank()))
+
+# Possible settings
+# Italy,Spain,UK,US,Germany
+# China,South Korea,Japan
+
+# Internationalisation ----
 
 translator = Translator$new(translation_json_path = "translation.json")
 translator$set_translation_language("en")
 
-theme_set(theme_bw() + theme(panel.border=element_blank()))
+# Functions ----
+
+ma = function(x, n=5) {
+    as.numeric(stats::filter(x, rep(1/n, n), sides=2))
+}
+
+preprocess = function (dat) {
+    colnames(dat)[1:4] = c("Province", "Country", "Latitude", "Longitude")
+
+    dat$Country[dat$Country == "United Kingdom"] =  "UK"
+    dat$Country[dat$Country == "Korea, South"] =  "South Korea"
+    dat$Country[dat$Country == "Taiwan*"] =  "Taiwan"
+    dat = pivot_longer(dat, 5:last_col(), names_to="Date", values_to="Value")
+    dat = dat %>% group_by(Country, Date) %>%
+        summarise(Value=sum(Value)) %>%
+        ungroup()
+    dat$Date = mdy(dat$Date)
+    dat
+}
+
+# Reading the data from the RDS file ----
 
 populations = read_rds("populations.rds")
 
 src = paste(today(), ".rds", sep="")
 
-ma = function(x, n=5) as.numeric(stats::filter(x, rep(1/n, n), sides=2))
-
 if (file.exists(src)) {
     dat = read_rds(src)
-} else {
+} else { # Reading the data from GitHub ----
     fn = function (str)
         paste("time_series_covid19_", str, "_global.csv", sep="")
-
-    preprocess = function (dat) {
-        colnames(dat)[1:4] = c("Province", "Country", "Latitude", "Longitude")
-
-        dat$Country[dat$Country == "United Kingdom"] =  "UK"
-        dat$Country[dat$Country == "Korea, South"] =  "South Korea"
-        dat$Country[dat$Country == "Taiwan*"] =  "Taiwan"
-        dat = pivot_longer(dat, 5:last_col(), names_to="Date", values_to="Value")
-        dat = dat %>% group_by(Country, Date) %>%
-            summarise(Value=sum(Value)) %>%
-            ungroup()
-        dat$Date = mdy(dat$Date)
-        dat
-    }
 
     path = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series"
 
@@ -63,13 +74,19 @@ if (file.exists(src)) {
 country_list = (dat[[2]] %>% filter(Date == dmy("15-03-2020") & Value > 40))$Country
 country_list = setdiff(country_list, "Others")
 
+# Server ----
+
 shinyServer(function(input, output) {
+    # Internationalisation ----
+
     i18n = reactive({
         selected = input$selected_language
         if (length(selected) > 0 && selected %in% translator$languages)
             translator$set_translation_language(selected)
         translator
     })
+
+    # Cumulative plot ----
 
     output$cumPlot = renderPlot({
         if (str_starts(input$countries, "-")) {
@@ -87,7 +104,10 @@ shinyServer(function(input, output) {
             cl = selfn(country_list, cl)
         }
 
-        x = dat[[input$what]] %>% filter(Country %in% cl & Value > input$min)
+        x = dat[[input$what]] %>% filter(Country %in% cl &
+                                             Value > input$min &
+                                             Date >= input$daterange[1] &
+                                             Date <= input$daterange[2])
 
         p = ggplot(x,
                    aes(Date, Value, colour=Country)) +
@@ -106,11 +126,13 @@ shinyServer(function(input, output) {
                       nudge_x = 1,
                       hjust = 0) +
             ylab(NULL) + xlab(NULL) +
-            theme(plot.margin=unit(c(0,2,1,0), "in"),
+            theme(plot.margin=unit(c(0,1,1,0), "in"),
                   legend.position="none")
 
         p
     })
+
+    # Peak ----
 
     output$peakPlot = renderPlot({
         if (str_starts(input$countries, "-")) {
@@ -130,13 +152,17 @@ shinyServer(function(input, output) {
 
         x = dat[[input$what]] %>%
             filter(Country %in% cl &
+                       Date >= input$daterange[1] &
+                       Date <= input$daterange[2] &
                        Value > input$min) %>%
             group_by(Country) %>%
             mutate(n=n()) %>%
             ungroup() %>%
             filter(n > 10)
 
-        x= dat[[input$what]] %>% filter(Country %in% x$Country)
+        x = dat[[input$what]] %>% filter(Country %in% x$Country &
+                                             Date >= input$daterange[1] &
+                                             Date <= input$daterange[2])
 
         x = x %>% left_join(populations, by="Country")
 
@@ -144,14 +170,14 @@ shinyServer(function(input, output) {
         y = x %>% mutate(diff=as.integer(TODAY - Date)) %>%
             arrange(Date) %>%
             group_by(Country) %>%
-            mutate(n=n(), Difference=c(0, diff(Value)),
-                   Smoothed=ma(Difference, n=4)) %>%
+            mutate(n=n(), Difference=c(0, diff(Value))) %>%
             ungroup() %>%
-            mutate(NormalisedDifference=1000 * Difference/Population)
+            mutate(NormalisedDifference=1000 * Difference/Population,
+                   Smoothed=ma(NormalisedDifference, n=4))
 
         p = ggplot(y,
                aes(Date, NormalisedDifference, colour=Country)) +
-            geom_point() +
+            geom_point(alpha=0.3) +
             geom_smooth(method="loess", formula=y~x,
                         span=0.5, se=FALSE) +
             geom_text_repel(data=subset(y, Date == max(x$Date)),
@@ -164,11 +190,13 @@ shinyServer(function(input, output) {
                             hjust = 0) +
             ylab(NULL) + xlab(NULL) +
             coord_cartesian(clip="off") +
-            theme(plot.margin=unit(c(0,2,1,0), "in"),
+            theme(plot.margin=unit(c(0,1,1,0), "in"),
                   legend.position="none")
 
         p
     })
+
+    # Table ----
 
     output$stats = renderDataTable({
         if (str_starts(input$countries, "-")) {
@@ -191,7 +219,10 @@ shinyServer(function(input, output) {
             datatable()
     })
 
+    # UI ----
+
     output$content = renderUI({
+        TODAY = max(dat[[1]]$Date)
         tagList(
             selectInput('selected_language',
                         i18n()$t("Language"),
@@ -222,6 +253,12 @@ shinyServer(function(input, output) {
                                                             10000, 20000, 50000,
                                                             100000, 200000, 500000),
                                                   selected=10000, grid=TRUE),
+
+                    sliderInput("daterange", "Dates",
+                                min=as.Date("2020-02-01", "%Y-%m-%d"),
+                                max=TODAY,
+                                value=c(as.Date("2020-02-01", "%Y-%m-%d"), TODAY),
+                                timeFormat="%d-%m-%Y"),
 
                     p(i18n()$t("Log_paragraph")),
 
