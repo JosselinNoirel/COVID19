@@ -4,7 +4,9 @@ library("shiny")
 library("shiny.i18n")
 library("shinyWidgets") # devtools::install_github("dreamRs/shinyWidgets")
 library("ggrepel")      # install.packages("ggrepel")
-library("tidyverse")
+# library("tidyverse")
+library("readr")
+library("dplyr")
 library("lubridate")
 library("DT")
 
@@ -182,7 +184,7 @@ shinyServer(function(input, output) {
 
         p = ggplot(y,
                aes(Date, NormalisedDifference, colour=Country)) +
-            geom_point(alpha=0.3) +
+            (if (input$scatter) geom_point(alpha=0.3) else NULL) +
             geom_smooth(method="loess", formula=y~x,
                         span=0.5, se=FALSE) +
             geom_text_repel(data=subset(y, Date == max(x$Date)),
@@ -258,7 +260,7 @@ shinyServer(function(input, output) {
                     p(i18n()$t("Country_paragraph")),
 
                     textInput("countries", i18n()$t("Filter countries"),
-                              value="Europe,US,China"),
+                              value="Italy,France,Germany,Spain,UK,US"),
 
                     p(i18n()$t("Threshold_paragraph")),
 
@@ -276,15 +278,7 @@ shinyServer(function(input, output) {
                                 value=c(as.Date("2020-02-01", "%Y-%m-%d"), TODAY),
                                 timeFormat="%d-%m-%Y"),
 
-                    p(i18n()$t("Log_paragraph")),
-
-                    checkboxInput("log", i18n()$t("Log-scale"), value=TRUE),
-
-                    p(i18n()$t("Regression_paragraph")),
-
-                    checkboxInput("predict", i18n()$t("Slope"), value=FALSE),
-
-                    width=6 # Options
+                    width=5 # Options
                 ),
 
                 mainPanel(
@@ -292,16 +286,23 @@ shinyServer(function(input, output) {
                                 tabPanel(i18n()$t("Cumulative counts"),
                                          br(),
                                          p(i18n()$t("Cumplot_explanation")),
-                                         plotOutput("cumPlot")),
+                                         plotOutput("cumPlot"),
+                                         p(i18n()$t("Log_paragraph")),
+                                         checkboxInput("log", i18n()$t("Log-scale"), value=TRUE),
+                                         p(i18n()$t("Regression_paragraph")),
+                                         checkboxInput("predict", i18n()$t("Slope"), value=FALSE)),
                                 tabPanel(i18n()$t("Waiting for the peak"),
                                          br(),
                                          p(i18n()$t("Peakplot_explanation")),
-                                         plotOutput("peakPlot")),
+                                         plotOutput("peakPlot"),
+                                         p(i18n()$t("Scatter_paragraph")),
+                                         checkboxInput("scatter", i18n()$t("Scatter"), value=TRUE)
+                                ),
                                 tabPanel(i18n()$t("Table"),
                                          br(),
                                          p(i18n()$t("Table_explanation")),
                                          DT::dataTableOutput("stats"))),
-                    width=6
+                    width=7
                 )
             ),
 
