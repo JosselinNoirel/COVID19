@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     44567,        907]
-NotebookOptionsPosition[     43023,        874]
-NotebookOutlinePosition[     43432,        890]
-CellTagsIndexPosition[     43389,        887]
+NotebookDataLength[     45353,        943]
+NotebookOptionsPosition[     42569,        887]
+NotebookOutlinePosition[     42976,        903]
+CellTagsIndexPosition[     42933,        900]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,109 +23,8 @@ Cell[BoxData[
   RowBox[{"SetDirectory", "[", 
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.795099343677065*^9, 3.7950993474852*^9}, 
-   3.79510686764382*^9},ExpressionUUID->"a271e8f5-230a-46f3-964d-\
-4121d585bb62"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<San Marino\>\""}], "]"}], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<Saudi Arabia\>\""}], "]"}], ",", 
-   TemplateBox[{"\"Senegal\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Senegal\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Senegal\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Serbia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Serbia\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Serbia\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Singapore\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Singapore\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Singapore\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Slovakia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Slovakia\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Slovakia\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Slovenia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Slovenia\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Slovenia\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<South Africa\>\""}], "]"}], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<South Korea\>\""}], "]"}], ",", 
-   TemplateBox[{"\"Spain\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Spain\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Spain\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<Sri Lanka\>\""}], "]"}], ",", 
-   TemplateBox[{"\"Sweden\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Sweden\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Sweden\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Switzerland\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Switzerland\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Switzerland\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Taiwan\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Taiwan\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Taiwan\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Thailand\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Thailand\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Thailand\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<Trinidad and Tobago\>\""}], "]"}], 
-   ",", 
-   TemplateBox[{"\"Tunisia\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Tunisia\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Tunisia\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Turkey\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Turkey\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Turkey\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"United Kingdom\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"UK\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"UK\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Ukraine\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Ukraine\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Ukraine\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<United Arab Emirates\>\""}], "]"}], 
-   ",", 
-   TemplateBox[{"\"Uruguay\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Uruguay\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Uruguay\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"United States\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"US\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"US\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Uzbekistan\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Uzbekistan\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Uzbekistan\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Venezuela\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Venezuela\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Venezuela\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   TemplateBox[{"\"Vietnam\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Vietnam\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Vietnam\\\"]\"","\"country\""},
-    "Entity"], ",", 
-   RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Country\>\"", ",", "\"\<West Bank and Gaza\>\""}], "]"}]}], 
-  "}"}]], "Input",ExpressionUUID->"b82f86fd-0325-45cf-a3a8-187074bff29f"],
-
-Cell[CellGroupData[{
+   3.79510686764382*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"a271e8f5-230a-46f3-964d-4121d585bb62"],
 
 Cell[BoxData[{
  RowBox[{
@@ -133,45 +32,43 @@ Cell[BoxData[{
    RowBox[{"Flatten", "[", 
     RowBox[{"Rest", "[", 
      RowBox[{
-      RowBox[{"Import", "[", "\"\<population.csv\>\"", "]"}], 
+      RowBox[{"Import", "[", "\"\<populations.csv\>\"", "]"}], 
       "\[LeftDoubleBracket]", 
       RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], "]"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{"entityNames", "=", 
-  RowBox[{"countries", "/.", 
-   RowBox[{"{", 
-    RowBox[{
+ RowBox[{
+  RowBox[{"entityNames", "=", 
+   RowBox[{"countries", "/.", 
+    RowBox[{"{", 
      RowBox[{
-     "\"\<Bosnia and Herzegovina\>\"", "\[Rule]", 
-      "\"\<BosniaHerzegovina\>\""}], ",", "\[IndentingNewLine]", 
-     RowBox[{"\"\<Burkina Faso\>\"", "\[Rule]", "\"\<BurkinaFaso\>\""}], ",", 
-     
-     RowBox[{"\"\<New Zealand\>\"", "\[Rule]", "\"\<NewZealand\>\""}], ",", 
-     RowBox[{"\"\<Cote d'Ivoire\>\"", "\[Rule]", "\"\<IvoryCoast\>\""}], ",", 
-     
-     RowBox[{"\"\<Costa Rica\>\"", "\[Rule]", "\"\<CostaRica\>\""}], ",", 
-     RowBox[{"\"\<Czechia\>\"", "\[Rule]", "\"\<CzechRepublic\>\""}], ",", 
-     RowBox[{
-     "\"\<Congo (Kinshasa)\>\"", "\[Rule]", 
-      "\"\<DemocraticRepublicCongo\>\""}], ",", 
-     RowBox[{"\"\<North Macedonia\>\"", "\[Rule]", "\"\<Macedonia\>\""}], ",", 
-     RowBox[{"\"\<Sri Lanka\>\"", "\[Rule]", "\"\<SriLanka\>\""}], ",", 
-     RowBox[{"\"\<South Korea\>\"", "\[Rule]", "\"\<SouthKorea\>\""}], ",", 
-     RowBox[{"\"\<South Africa\>\"", "\[Rule]", "\"\<SouthAfrica\>\""}], ",", 
-     
-     RowBox[{
-     "\"\<Dominican Republic\>\"", "\[Rule]", "\"\<DominicanRepublic\>\""}], 
-     ",", 
-     RowBox[{"\"\<Saudi Arabia\>\"", "\[Rule]", "\"\<SaudiArabia\>\""}], ",", 
-     
-     RowBox[{
-     "\"\<United Arab Emirates\>\"", "\[Rule]", 
-      "\"\<UnitedArabEmirates\>\""}], ",", 
-     RowBox[{
-     "\"\<Trinidad and Tobago\>\"", "\[Rule]", "\"\<TrinidadTobago\>\""}], 
-     ",", "\[IndentingNewLine]", 
-     RowBox[{"\"\<San Marino\>\"", "\[Rule]", "\"\<SanMarino\>\""}]}], 
-    "}"}]}]}]}], "Input",
+      RowBox[{
+      "\"\<Bosnia and Herzegovina\>\"", "\[Rule]", 
+       "\"\<BosniaHerzegovina\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<Burkina Faso\>\"", "\[Rule]", "\"\<BurkinaFaso\>\""}], ",", 
+      RowBox[{"\"\<New Zealand\>\"", "\[Rule]", "\"\<NewZealand\>\""}], ",", 
+      RowBox[{"\"\<Cote d'Ivoire\>\"", "\[Rule]", "\"\<IvoryCoast\>\""}], ",", 
+      RowBox[{"\"\<Costa Rica\>\"", "\[Rule]", "\"\<CostaRica\>\""}], ",", 
+      RowBox[{"\"\<Czechia\>\"", "\[Rule]", "\"\<CzechRepublic\>\""}], ",", 
+      RowBox[{
+      "\"\<Congo (Kinshasa)\>\"", "\[Rule]", 
+       "\"\<DemocraticRepublicCongo\>\""}], ",", 
+      RowBox[{"\"\<North Macedonia\>\"", "\[Rule]", "\"\<Macedonia\>\""}], 
+      ",", 
+      RowBox[{"\"\<Sri Lanka\>\"", "\[Rule]", "\"\<SriLanka\>\""}], ",", 
+      RowBox[{"\"\<South Korea\>\"", "\[Rule]", "\"\<SouthKorea\>\""}], ",", 
+      RowBox[{"\"\<South Africa\>\"", "\[Rule]", "\"\<SouthAfrica\>\""}], ",", 
+      RowBox[{
+      "\"\<Dominican Republic\>\"", "\[Rule]", "\"\<DominicanRepublic\>\""}], 
+      ",", 
+      RowBox[{"\"\<Saudi Arabia\>\"", "\[Rule]", "\"\<SaudiArabia\>\""}], ",", 
+      RowBox[{
+      "\"\<United Arab Emirates\>\"", "\[Rule]", 
+       "\"\<UnitedArabEmirates\>\""}], ",", 
+      RowBox[{
+      "\"\<Trinidad and Tobago\>\"", "\[Rule]", "\"\<TrinidadTobago\>\""}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<San Marino\>\"", "\[Rule]", "\"\<SanMarino\>\""}]}], 
+     "}"}]}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.79509933214935*^9, 3.7950993670612698`*^9}, {
    3.7950994984895563`*^9, 3.7950995287209053`*^9}, {3.7950996021675997`*^9, 
    3.795099726839448*^9}, {3.7950997581478157`*^9, 3.795099766576131*^9}, {
@@ -179,69 +76,8 @@ Cell[BoxData[{
    3.795100065665463*^9}, {3.795100230192205*^9, 3.79510023783495*^9}, {
    3.79510037246939*^9, 3.7951003731509237`*^9}, {3.7951004156262493`*^9, 
    3.795100421269038*^9}, 3.795100456182665*^9, {3.7951011292626543`*^9, 
-   3.795101132219656*^9}},
- CellLabel->
-  "In[105]:=",ExpressionUUID->"dd2bbba3-4bff-4033-97fc-3917d2ee999c"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"\<\"Afghanistan\"\>", ",", "\<\"Albania\"\>", 
-   ",", "\<\"Algeria\"\>", ",", "\<\"Andorra\"\>", ",", "\<\"Argentina\"\>", 
-   ",", "\<\"Armenia\"\>", ",", "\<\"Australia\"\>", ",", "\<\"Austria\"\>", 
-   ",", "\<\"Azerbaijan\"\>", ",", "\<\"Bahrain\"\>", 
-   ",", "\<\"Bangladesh\"\>", ",", "\<\"Belarus\"\>", ",", "\<\"Belgium\"\>", 
-   ",", "\<\"Bolivia\"\>", ",", "\<\"BosniaHerzegovina\"\>", 
-   ",", "\<\"Brazil\"\>", ",", "\<\"Brunei\"\>", ",", "\<\"Bulgaria\"\>", 
-   ",", "\<\"BurkinaFaso\"\>", ",", "\<\"Cambodia\"\>", 
-   ",", "\<\"Cameroon\"\>", ",", "\<\"Canada\"\>", ",", "\<\"Chile\"\>", 
-   ",", "\<\"China\"\>", ",", "\<\"Colombia\"\>", 
-   ",", "\<\"DemocraticRepublicCongo\"\>", ",", "\<\"CostaRica\"\>", 
-   ",", "\<\"IvoryCoast\"\>", ",", "\<\"Croatia\"\>", ",", "\<\"Cuba\"\>", 
-   ",", "\<\"Cyprus\"\>", ",", "\<\"CzechRepublic\"\>", 
-   ",", "\<\"Denmark\"\>", ",", "\<\"Diamond Princess\"\>", 
-   ",", "\<\"DominicanRepublic\"\>", ",", "\<\"Ecuador\"\>", 
-   ",", "\<\"Egypt\"\>", ",", "\<\"Estonia\"\>", ",", "\<\"Finland\"\>", 
-   ",", "\<\"France\"\>", ",", "\<\"Georgia\"\>", ",", "\<\"Germany\"\>", 
-   ",", "\<\"Ghana\"\>", ",", "\<\"Greece\"\>", ",", "\<\"Honduras\"\>", 
-   ",", "\<\"Hungary\"\>", ",", "\<\"Iceland\"\>", ",", "\<\"India\"\>", 
-   ",", "\<\"Indonesia\"\>", ",", "\<\"Iran\"\>", ",", "\<\"Iraq\"\>", 
-   ",", "\<\"Ireland\"\>", ",", "\<\"Israel\"\>", ",", "\<\"Italy\"\>", 
-   ",", "\<\"Japan\"\>", ",", "\<\"Jordan\"\>", ",", "\<\"Kazakhstan\"\>", 
-   ",", "\<\"Kenya\"\>", ",", "\<\"Kosovo\"\>", ",", "\<\"Kuwait\"\>", 
-   ",", "\<\"Kyrgyzstan\"\>", ",", "\<\"Latvia\"\>", ",", "\<\"Lebanon\"\>", 
-   ",", "\<\"Liechtenstein\"\>", ",", "\<\"Lithuania\"\>", 
-   ",", "\<\"Luxembourg\"\>", ",", "\<\"Madagascar\"\>", 
-   ",", "\<\"Malaysia\"\>", ",", "\<\"Malta\"\>", ",", "\<\"Mauritius\"\>", 
-   ",", "\<\"Mexico\"\>", ",", "\<\"Moldova\"\>", ",", "\<\"Monaco\"\>", 
-   ",", "\<\"Montenegro\"\>", ",", "\<\"Morocco\"\>", 
-   ",", "\<\"Netherlands\"\>", ",", "\<\"NewZealand\"\>", 
-   ",", "\<\"Nigeria\"\>", ",", "\<\"Macedonia\"\>", ",", "\<\"Norway\"\>", 
-   ",", "\<\"Oman\"\>", ",", "\<\"Pakistan\"\>", ",", "\<\"Panama\"\>", 
-   ",", "\<\"Paraguay\"\>", ",", "\<\"Peru\"\>", ",", "\<\"Philippines\"\>", 
-   ",", "\<\"Poland\"\>", ",", "\<\"Portugal\"\>", ",", "\<\"Qatar\"\>", 
-   ",", "\<\"Romania\"\>", ",", "\<\"Russia\"\>", ",", "\<\"Rwanda\"\>", 
-   ",", "\<\"SanMarino\"\>", ",", "\<\"SaudiArabia\"\>", 
-   ",", "\<\"Senegal\"\>", ",", "\<\"Serbia\"\>", ",", "\<\"Singapore\"\>", 
-   ",", "\<\"Slovakia\"\>", ",", "\<\"Slovenia\"\>", 
-   ",", "\<\"SouthAfrica\"\>", ",", "\<\"SouthKorea\"\>", 
-   ",", "\<\"Spain\"\>", ",", "\<\"SriLanka\"\>", ",", "\<\"Sweden\"\>", 
-   ",", "\<\"Switzerland\"\>", ",", "\<\"Taiwan\"\>", ",", "\<\"Thailand\"\>",
-    ",", "\<\"TrinidadTobago\"\>", ",", "\<\"Tunisia\"\>", 
-   ",", "\<\"Turkey\"\>", ",", "\<\"UK\"\>", ",", "\<\"Ukraine\"\>", 
-   ",", "\<\"UnitedArabEmirates\"\>", ",", "\<\"Uruguay\"\>", 
-   ",", "\<\"US\"\>", ",", "\<\"Uzbekistan\"\>", ",", "\<\"Venezuela\"\>", 
-   ",", "\<\"Vietnam\"\>", ",", "\<\"West Bank and Gaza\"\>"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.795099350991744*^9, 3.7950993672985353`*^9}, 
-   3.795099498850271*^9, 3.795099529299897*^9, {3.79509961923694*^9, 
-   3.795099676649644*^9}, {3.7950997132758408`*^9, 3.795099727193734*^9}, 
-   3.7950997851378403`*^9, 3.795099851271755*^9, {3.795099898862131*^9, 
-   3.79509996014282*^9}, 3.7951000315596943`*^9, 3.795100066049432*^9, 
-   3.795100238137542*^9, 3.795100421649035*^9, 3.795100457087195*^9, 
-   3.79510113270078*^9},
- CellLabel->
-  "Out[106]=",ExpressionUUID->"09683bd7-df39-41c0-8fa0-e25273908536"]
-}, Open  ]],
+   3.795101132219656*^9}, {3.79757671560763*^9, 3.797576719422274*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"dd2bbba3-4bff-4033-97fc-3917d2ee999c"],
 
 Cell[BoxData[{
  RowBox[{
@@ -263,7 +99,7 @@ Cell[BoxData[{
    RowBox[{"\"\<Country\>\"", ",", "cnt"}], "]"}]}]}], "Input",
  CellChangeTimes->{{3.795100349785615*^9, 3.7951003988113327`*^9}, 
    3.7951004306876993`*^9, {3.7951004937753057`*^9, 3.795100510898555*^9}},
- CellLabel->"In[76]:=",ExpressionUUID->"e2b5725f-c597-4c1e-bb73-f073513fdaca"],
+ CellLabel->"In[13]:=",ExpressionUUID->"e2b5725f-c597-4c1e-bb73-f073513fdaca"],
 
 Cell[CellGroupData[{
 
@@ -274,15 +110,11 @@ Cell[BoxData[
   3.795099502479864*^9, 3.7950995326738863`*^9}, {3.795099658942453*^9, 
   3.7950996606479797`*^9}, {3.79510034589165*^9, 3.7951003476828403`*^9}, {
   3.7951005983333187`*^9, 3.795100600291613*^9}},
- CellLabel->"In[80]:=",ExpressionUUID->"0321c698-89b8-4479-a25f-1e6a58c258ac"],
+ CellLabel->"In[16]:=",ExpressionUUID->"0321c698-89b8-4479-a25f-1e6a58c258ac"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   TemplateBox[{"\"Afghanistan\"",RowBox[{"Entity", "[", 
-       RowBox[{"\"Country\"", ",", "\"Afghanistan\""}], "]"}],
-     "\"Entity[\\\"Country\\\", \\\"Afghanistan\\\"]\"","\"country\""},
-    "Entity"], ",", 
    TemplateBox[{"\"Albania\"",RowBox[{"Entity", "[", 
        RowBox[{"\"Country\"", ",", "\"Albania\""}], "]"}],
      "\"Entity[\\\"Country\\\", \\\"Albania\\\"]\"","\"country\""},
@@ -770,9 +602,17 @@ Cell[BoxData[
    3.795099792839416*^9, 3.795099854782436*^9, {3.79509992429659*^9, 
    3.795099941601531*^9}, 3.795100034168791*^9, 3.795100068764263*^9, 
    3.795100241601674*^9, 3.795100276194709*^9, {3.795100427482931*^9, 
-   3.7951004589151278`*^9}, 3.795100513234099*^9, 3.795100600910081*^9},
- CellLabel->"Out[80]=",ExpressionUUID->"d4b5c72c-8857-4e8f-a863-d177f2977ada"]
+   3.7951004589151278`*^9}, 3.795100513234099*^9, 3.795100600910081*^9, 
+   3.797576728079117*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"ee55c2e7-20cb-4662-a543-fd4659308ac1"]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Population", "Section",
+ CellChangeTimes->{{3.797577029596092*^9, 
+  3.7975770315552483`*^9}},ExpressionUUID->"0ad6723f-8532-4400-98d7-\
+87bc676b901e"],
 
 Cell[BoxData[{
  RowBox[{
@@ -783,7 +623,7 @@ Cell[BoxData[{
   RowBox[{"TimeConstrained", "[", 
    RowBox[{
     RowBox[{"QuantityMagnitude", "@", 
-     RowBox[{"x", "[", "\"\<Population\>\"", "]"}]}], ",", "1", ",", 
+     RowBox[{"x", "[", "\"\<Population\>\"", "]"}]}], ",", "2", ",", 
     "$Failed"}], "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -792,11 +632,15 @@ Cell[BoxData[{
         RowBox[{"\"Ship\"", ",", "\"DiamondPrincessShip::g5dvq\""}], "]"}],
       "\"Entity[\\\"Ship\\\", \\\"DiamondPrincessShip::g5dvq\\\"]\"",
       "\"ship\""},
-     "Entity"], "]"}], "=", "3711"}], ";"}]}], "Input",
+     "Entity"], "]"}], "=", "3711"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SetAttributes", "[", 
+  RowBox[{"pop", ",", "Listable"}], "]"}]}], "Input",
  CellChangeTimes->{{3.795100824435281*^9, 3.795100850034189*^9}, {
   3.7951009275443068`*^9, 3.79510094502046*^9}, {3.7951010048496857`*^9, 
-  3.795101008278747*^9}, {3.795101040455758*^9, 3.795101063952729*^9}},
- CellLabel->"In[99]:=",ExpressionUUID->"7e464462-d230-40dc-8e0b-8edd95d9057b"],
+  3.795101008278747*^9}, {3.795101040455758*^9, 3.795101063952729*^9}, {
+  3.797576764661577*^9, 3.79757676968394*^9}, {3.7975802939281597`*^9, 
+  3.797580294029539*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"7e464462-d230-40dc-8e0b-8edd95d9057b"],
 
 Cell[CellGroupData[{
 
@@ -811,25 +655,24 @@ Cell[BoxData[
  CellChangeTimes->{{3.7951008508683043`*^9, 3.795100876730297*^9}, {
   3.795100948064847*^9, 3.7951009488297997`*^9}, {3.7951010823309383`*^9, 
   3.795101113773155*^9}},
- CellLabel->
-  "In[104]:=",ExpressionUUID->"b98d543c-5df1-4dd0-9a19-78f47872e44a"],
+ CellLabel->"In[80]:=",ExpressionUUID->"b98d543c-5df1-4dd0-9a19-78f47872e44a"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "35530081", ",", "2930187", ",", "41318142", ",", "76965", ",", "44271041", 
-   ",", "2930450", ",", "24450561", ",", "8735453", ",", "9827589", ",", 
-   "1492584", ",", "164669751", ",", "9468338", ",", "11429336", ",", 
-   "11051600", ",", "3507017", ",", "209288278", ",", "428697", ",", 
-   "7084571", ",", "19193382", ",", "16005373", ",", "24053727", ",", 
-   "36624199", ",", "18054726", ",", "1409517397", ",", "49065615", ",", 
-   "81339988", ",", "4905769", ",", "24294750", ",", "4189353", ",", 
-   "11484636", ",", "1179551", ",", "10618303", ",", "5733551", ",", "3711", 
-   ",", "10766998", ",", "16624858", ",", "97553151", ",", "1309632", ",", 
-   "5523231", ",", "64979548", ",", "3912061", ",", "82114224", ",", 
-   "28833629", ",", "11159773", ",", "9265067", ",", "9721559", ",", "335025",
-    ",", "1339180127", ",", "263991379", ",", "81162788", ",", "38274618", 
-   ",", "4761657", ",", "8321570", ",", "59359900", ",", "127484450", ",", 
+  "2930187", ",", "41318142", ",", "76965", ",", "44271041", ",", "2930450", 
+   ",", "24450561", ",", "8735453", ",", "9827589", ",", "1492584", ",", 
+   "164669751", ",", "9468338", ",", "11429336", ",", "11051600", ",", 
+   "3507017", ",", "209288278", ",", "428697", ",", "7084571", ",", 
+   "19193382", ",", "16005373", ",", "24053727", ",", "36624199", ",", 
+   "18054726", ",", "1409517397", ",", "49065615", ",", "81339988", ",", 
+   "4905769", ",", "24294750", ",", "4189353", ",", "11484636", ",", 
+   "1179551", ",", "10618303", ",", "5733551", ",", "3711", ",", "10766998", 
+   ",", "16624858", ",", "97553151", ",", "1309632", ",", "5523231", ",", 
+   "64979548", ",", "3912061", ",", "82114224", ",", "28833629", ",", 
+   "11159773", ",", "9265067", ",", "9721559", ",", "335025", ",", 
+   "1339180127", ",", "263991379", ",", "81162788", ",", "38274618", ",", 
+   "4761657", ",", "8321570", ",", "59359900", ",", "127484450", ",", 
    "9702353", ",", "18204499", ",", "49699862", ",", "1859203", ",", 
    "4136528", ",", "6045117", ",", "1949670", ",", "6082357", ",", "37922", 
    ",", "2890297", ",", "583455", ",", "25570895", ",", "31624264", ",", 
@@ -847,11 +690,179 @@ Cell[BoxData[
    "3456750", ",", "324459463", ",", "31910641", ",", "31977065", ",", 
    "95540800", ",", "4494439"}], "}"}]], "Output",
  CellChangeTimes->{{3.795100857737398*^9, 3.795100877160088*^9}, {
-  3.795100962912939*^9, 3.795100985645393*^9}, {3.795101068092229*^9, 
-  3.7951011141699533`*^9}},
- CellLabel->
-  "Out[104]=",ExpressionUUID->"2a091275-8f2f-4994-a6e6-68f7097b77d8"]
+   3.795100962912939*^9, 3.795100985645393*^9}, {3.795101068092229*^9, 
+   3.7951011141699533`*^9}, 3.797576738275474*^9, 3.797576861843861*^9, 
+   3.797580297632826*^9},
+ CellLabel->"Out[80]=",ExpressionUUID->"e3d0638c-e940-42f4-899c-08cfc03ba85d"]
+}, Open  ]]
 }, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Continent", "Section",
+ CellChangeTimes->{{3.797577034276379*^9, 
+  3.7975770358671503`*^9}},ExpressionUUID->"3f9a3cd8-cc7a-48b5-9867-\
+821fc5e9568b"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"continent", "[", 
+   RowBox[{"x", ":", 
+    RowBox[{"Entity", "[", 
+     RowBox[{"\"\<Country\>\"", ",", "_"}], "]"}]}], "]"}], ":=", 
+  RowBox[{"TimeConstrained", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "\"\<Continent\>\"", "]"}], ",", "2", ",", "$Failed"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"continent", "[", 
+    TemplateBox[{"\"Diamond Princess\"",RowBox[{"Entity", "[", 
+        RowBox[{"\"Ship\"", ",", "\"DiamondPrincessShip::g5dvq\""}], "]"}],
+      "\"Entity[\\\"Ship\\\", \\\"DiamondPrincessShip::g5dvq\\\"]\"",
+      "\"ship\""},
+     "Entity"], "]"}], "=", "Indeterminate"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"SetAttributes", "[", 
+  RowBox[{"continent", ",", "Listable"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.79757691376357*^9, 3.797576930489221*^9}, {
+   3.79757701413245*^9, 3.7975770501088057`*^9}, {3.797577348814386*^9, 
+   3.797577380835881*^9}, {3.797577489683619*^9, 3.7975774933833027`*^9}, 
+   3.797577545914466*^9},
+ CellLabel->"In[91]:=",ExpressionUUID->"8754eadd-0430-447b-bf40-4b600d30b45e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"continents", "=", 
+  RowBox[{
+   RowBox[{"Replace", "[", 
+    RowBox[{
+     RowBox[{"continent", "[", "entities", "]"}], ",", 
+     RowBox[{
+      RowBox[{"{", "a___", "}"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"List", "[", "a", "]"}], "\[LeftDoubleBracket]", "1", 
+       "\[RightDoubleBracket]"}]}], ",", 
+     RowBox[{"{", "1", "}"}]}], "]"}], "/.", 
+   RowBox[{
+    RowBox[{"EntityClass", "[", 
+     RowBox[{"\"\<Country\>\"", ",", "n_"}], "]"}], "\[RuleDelayed]", 
+    "n"}]}]}]], "Input",
+ CellChangeTimes->{{3.797577054458847*^9, 3.797577079007476*^9}, {
+  3.797577389504649*^9, 3.7975774181968117`*^9}, {3.797577478201207*^9, 
+  3.7975774976889343`*^9}, {3.797577587053132*^9, 3.7975776313952723`*^9}, {
+  3.79757766502248*^9, 3.797577689262794*^9}},
+ CellLabel->"In[94]:=",ExpressionUUID->"10bf2714-8ea5-4469-aed5-f998a5dcaf17"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Europe\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Oceania\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Africa\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Africa\"\>", 
+   ",", "\<\"NorthAmerica\"\>", ",", "\<\"SouthAmerica\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"SouthAmerica\"\>", ",", "\<\"Africa\"\>", 
+   ",", "\<\"NorthAmerica\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"NorthAmerica\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Europe\"\>", ",", "Indeterminate", ",", "\<\"NorthAmerica\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"NorthAmerica\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Africa\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Africa\"\>", ",", "\<\"NorthAmerica\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Oceania\"\>", 
+   ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>", ",", "\<\"NorthAmerica\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"SouthAmerica\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Africa\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Africa\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"NorthAmerica\"\>", ",", "\<\"Africa\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"Europe\"\>", ",", "\<\"Europe\"\>", 
+   ",", "\<\"Asia\"\>", ",", "\<\"SouthAmerica\"\>", 
+   ",", "\<\"NorthAmerica\"\>", ",", "\<\"Asia\"\>", 
+   ",", "\<\"SouthAmerica\"\>", ",", "\<\"Asia\"\>", ",", "\<\"Asia\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.797577520340885*^9, 3.797577547557085*^9}, {
+   3.797577598977241*^9, 3.797577631801723*^9}, {3.7975776667088423`*^9, 
+   3.797577691882256*^9}, 3.797580301028736*^9, 3.797580354341405*^9},
+ CellLabel->"Out[94]=",ExpressionUUID->"3a459d2e-07c6-4c0c-bc4a-bf162aaa385d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"continents", "=", 
+   RowBox[{"continents", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<NorthAmerica\>\"", "\[Rule]", "\"\<North America\>\""}], 
+      ",", 
+      RowBox[{"\"\<SouthAmerica\>\"", "\[Rule]", "\"\<South America\>\""}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.797580321417306*^9, 3.79758034908068*^9}},
+ CellLabel->"In[95]:=",ExpressionUUID->"64f11fd6-779c-4ed6-a24c-888f2b74a36e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "countries", "]"}]], "Input",
+ CellChangeTimes->{{3.797577644470459*^9, 3.7975776464513073`*^9}},
+ CellLabel->"In[96]:=",ExpressionUUID->"7e2e4f71-7693-4f83-9eb2-cf153d00b1b8"],
+
+Cell[BoxData["118"], "Output",
+ CellChangeTimes->{3.797577646709058*^9, 3.7975776933704863`*^9, 
+  3.797580301042283*^9, 3.7975803544013557`*^9},
+ CellLabel->"Out[96]=",ExpressionUUID->"30db1ce7-57bf-43e0-b7e1-20e0280bfcb2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "populations", "]"}]], "Input",
+ CellChangeTimes->{{3.797577647215102*^9, 3.797577649618465*^9}},
+ CellLabel->"In[97]:=",ExpressionUUID->"22583173-07ea-4ca1-b5ef-fcd40c84d1eb"],
+
+Cell[BoxData["118"], "Output",
+ CellChangeTimes->{3.797577649966033*^9, 3.797577694019114*^9, 
+  3.7975803010917997`*^9, 3.7975803544147*^9},
+ CellLabel->"Out[97]=",ExpressionUUID->"b8be3bd5-35c4-43ce-af1a-cc1309dd7a31"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "continents", "]"}]], "Input",
+ CellChangeTimes->{{3.797577650719754*^9, 3.797577654315853*^9}},
+ CellLabel->"In[98]:=",ExpressionUUID->"3773a968-fd14-44b7-9bd2-af6c20b97d04"],
+
+Cell[BoxData["118"], "Output",
+ CellChangeTimes->{3.797577654567813*^9, 3.797577694602282*^9, 
+  3.797580301105647*^9, 3.797580354462237*^9},
+ CellLabel->"Out[98]=",ExpressionUUID->"ba5c6921-fdfd-4570-8ce6-1146232cf00e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Export", "Section",
+ CellChangeTimes->{{3.797577036955185*^9, 
+  3.797577037483189*^9}},ExpressionUUID->"b0a4ff2c-cac6-429f-8a25-\
+5dad7eacae05"],
 
 Cell[CellGroupData[{
 
@@ -860,20 +871,22 @@ Cell[BoxData[
   RowBox[{"\"\<populations.csv\>\"", ",", 
    RowBox[{
     RowBox[{"{", 
-     RowBox[{"countries", ",", "populations"}], "}"}], "\[Transpose]"}]}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.7951011156177397`*^9, 3.795101148802289*^9}},
- CellLabel->
-  "In[108]:=",ExpressionUUID->"6a465c39-10f2-4c52-8ebb-3d400e20e483"],
+     RowBox[{"countries", ",", "populations", ",", "continents"}], "}"}], 
+    "\[Transpose]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7951011156177397`*^9, 3.795101148802289*^9}, {
+   3.797577635780767*^9, 3.797577640581807*^9}, 3.79758027332771*^9},
+ CellLabel->"In[99]:=",ExpressionUUID->"6a465c39-10f2-4c52-8ebb-3d400e20e483"],
 
 Cell[BoxData["\<\"populations.csv\"\>"], "Output",
- CellChangeTimes->{{3.795101139732747*^9, 3.795101148989766*^9}},
- CellLabel->
-  "Out[108]=",ExpressionUUID->"9866e319-7834-4857-8b9e-30bf58d41ce0"]
+ CellChangeTimes->{{3.795101139732747*^9, 3.795101148989766*^9}, 
+   3.797576867033951*^9, 3.797577637527422*^9, 3.7975776957083187`*^9, 
+   3.797580274050942*^9, 3.7975803048052797`*^9, 3.797580357166676*^9},
+ CellLabel->"Out[99]=",ExpressionUUID->"b7edb228-9497-4aa5-9ae1-b8b7a15c1527"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 678},
-WindowMargins->{{-1197, Automatic}, {28, Automatic}},
+WindowMargins->{{Automatic, 100}, {22, Automatic}},
 TaggingRules->{ScrollPosition -> {0., 24.}, "TryRealOnly" -> False},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -889,25 +902,48 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 269, 6, 30, "Input",ExpressionUUID->"a271e8f5-230a-46f3-964d-4121d585bb62"],
-Cell[830, 28, 4799, 97, 278, "Input",ExpressionUUID->"b82f86fd-0325-45cf-a3a8-187074bff29f"],
+Cell[558, 20, 290, 6, 30, "Input",ExpressionUUID->"a271e8f5-230a-46f3-964d-4121d585bb62"],
+Cell[851, 28, 2585, 51, 220, "Input",ExpressionUUID->"dd2bbba3-4bff-4033-97fc-3917d2ee999c"],
+Cell[3439, 81, 878, 20, 73, "Input",ExpressionUUID->"e2b5725f-c597-4c1e-bb73-f073513fdaca"],
 Cell[CellGroupData[{
-Cell[5654, 129, 2512, 54, 220, "Input",ExpressionUUID->"dd2bbba3-4bff-4033-97fc-3917d2ee999c"],
-Cell[8169, 185, 3739, 57, 329, "Output",ExpressionUUID->"09683bd7-df39-41c0-8fa0-e25273908536"]
-}, Open  ]],
-Cell[11923, 245, 878, 20, 73, "Input",ExpressionUUID->"e2b5725f-c597-4c1e-bb73-f073513fdaca"],
-Cell[CellGroupData[{
-Cell[12826, 269, 435, 7, 30, "Input",ExpressionUUID->"0321c698-89b8-4479-a25f-1e6a58c258ac"],
-Cell[13264, 278, 25207, 495, 496, "Output",ExpressionUUID->"d4b5c72c-8857-4e8f-a863-d177f2977ada"]
-}, Open  ]],
-Cell[38486, 776, 992, 22, 81, "Input",ExpressionUUID->"7e464462-d230-40dc-8e0b-8edd95d9057b"],
-Cell[CellGroupData[{
-Cell[39503, 802, 522, 12, 30, "Input",ExpressionUUID->"b98d543c-5df1-4dd0-9a19-78f47872e44a"],
-Cell[40028, 816, 2383, 36, 329, "Output",ExpressionUUID->"2a091275-8f2f-4994-a6e6-68f7097b77d8"]
+Cell[4342, 105, 435, 7, 30, "Input",ExpressionUUID->"0321c698-89b8-4479-a25f-1e6a58c258ac"],
+Cell[4780, 114, 25019, 492, 496, "Output",ExpressionUUID->"ee55c2e7-20cb-4662-a543-fd4659308ac1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[42448, 857, 357, 9, 30, "Input",ExpressionUUID->"6a465c39-10f2-4c52-8ebb-3d400e20e483"],
-Cell[42808, 868, 199, 3, 34, "Output",ExpressionUUID->"9866e319-7834-4857-8b9e-30bf58d41ce0"]
+Cell[29836, 611, 157, 3, 67, "Section",ExpressionUUID->"0ad6723f-8532-4400-98d7-87bc676b901e"],
+Cell[29996, 616, 1190, 26, 103, "Input",ExpressionUUID->"7e464462-d230-40dc-8e0b-8edd95d9057b"],
+Cell[CellGroupData[{
+Cell[31211, 646, 518, 11, 30, "Input",ExpressionUUID->"b98d543c-5df1-4dd0-9a19-78f47872e44a"],
+Cell[31732, 659, 2434, 36, 329, "Output",ExpressionUUID->"e3d0638c-e940-42f4-899c-08cfc03ba85d"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34215, 701, 156, 3, 67, "Section",ExpressionUUID->"3f9a3cd8-cc7a-48b5-9867-821fc5e9568b"],
+Cell[34374, 706, 1101, 24, 82, "Input",ExpressionUUID->"8754eadd-0430-447b-bf40-4b600d30b45e"],
+Cell[CellGroupData[{
+Cell[35500, 734, 874, 20, 52, "Input",ExpressionUUID->"10bf2714-8ea5-4469-aed5-f998a5dcaf17"],
+Cell[36377, 756, 3262, 47, 266, "Output",ExpressionUUID->"3a459d2e-07c6-4c0c-bc4a-bf162aaa385d"]
+}, Open  ]],
+Cell[39654, 806, 462, 11, 52, "Input",ExpressionUUID->"64f11fd6-779c-4ed6-a24c-888f2b74a36e"],
+Cell[CellGroupData[{
+Cell[40141, 821, 214, 3, 30, "Input",ExpressionUUID->"7e2e4f71-7693-4f83-9eb2-cf153d00b1b8"],
+Cell[40358, 826, 224, 3, 34, "Output",ExpressionUUID->"30db1ce7-57bf-43e0-b7e1-20e0280bfcb2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40619, 834, 214, 3, 30, "Input",ExpressionUUID->"22583173-07ea-4ca1-b5ef-fcd40c84d1eb"],
+Cell[40836, 839, 220, 3, 34, "Output",ExpressionUUID->"b8be3bd5-35c4-43ce-af1a-cc1309dd7a31"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41093, 847, 213, 3, 30, "Input",ExpressionUUID->"3773a968-fd14-44b7-9bd2-af6c20b97d04"],
+Cell[41309, 852, 220, 3, 34, "Output",ExpressionUUID->"ba5c6921-fdfd-4570-8ce6-1146232cf00e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41578, 861, 151, 3, 67, "Section",ExpressionUUID->"b0a4ff2c-cac6-429f-8a25-5dad7eacae05"],
+Cell[CellGroupData[{
+Cell[41754, 868, 445, 9, 30, "Input",ExpressionUUID->"6a465c39-10f2-4c52-8ebb-3d400e20e483"],
+Cell[42202, 879, 339, 4, 34, "Output",ExpressionUUID->"b7edb228-9497-4aa5-9ae1-b8b7a15c1527"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

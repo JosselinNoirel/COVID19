@@ -43,8 +43,8 @@
     },
     {
       "short": "Country_paragraph",
-      "en": "Filter countries to focus on a specific group using a comma-separated list. If the first character of the list is a dash, then the countries are excluded from the analysis.",
-      "fr": "On peut se concentrer sur un groupe de pays en donnant une liste de pays séparés par des virgules ; si le champ commence par un tiret « - », les pays sont exclus de l'analyse."
+      "en": "Filter countries to focus on a specific group using a comma-separated list. If the first character of the list is a dash, then the countries are excluded from the analysis. You can also use continents insteady of countries.",
+      "fr": "On peut se concentrer sur un groupe de pays en donnant une liste de pays séparés par des virgules ; si le champ commence par un tiret « - », les pays sont exclus de l'analyse. Il est possible d'utiliser des noms de continent."
     },
     {
       "short": "Filter countries",

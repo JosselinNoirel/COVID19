@@ -16,7 +16,7 @@ theme_set(theme_bw() + theme(panel.border=element_blank()))
 
 # Internationalisation ----
 
-translator = Translator$new(translation_json_path = "translation.json")
+translator = Translator$new(translation_json_path="translation.json")
 translator$set_translation_language("en")
 
 # Functions ----
@@ -28,9 +28,9 @@ ma = function(x, n=5) {
 preprocess = function (dat) {
     colnames(dat)[1:4] = c("Province", "Country", "Latitude", "Longitude")
 
-    dat$Country[dat$Country == "United Kingdom"] =  "UK"
-    dat$Country[dat$Country == "Korea, South"] =  "South Korea"
-    dat$Country[dat$Country == "Taiwan*"] =  "Taiwan"
+    dat$Country[dat$Country == "United Kingdom"] = "UK"
+    dat$Country[dat$Country == "Korea, South"] = "South Korea"
+    dat$Country[dat$Country == "Taiwan*"] = "Taiwan"
     dat = pivot_longer(dat, 5:last_col(), names_to="Date", values_to="Value")
     dat = dat %>% group_by(Country, Date) %>%
         summarise(Value=sum(Value)) %>%
@@ -41,7 +41,10 @@ preprocess = function (dat) {
 
 # Reading the data from the RDS file ----
 
-populations = read_rds("populations.rds")
+populations = read_csv("populations.csv", col_names=FALSE, na="Indeterminate")
+colnames(populations) = c("Country", "Population", "Continent")
+continents = unique(populations$Continent)
+continents = continents[! is.na(continents)]
 
 src = paste(today(), ".rds", sep="")
 
@@ -97,6 +100,7 @@ shinyServer(function(input, output) {
             input_countries = input$countries
         }
         cl = strsplit(input_countries, ',')[[1]]
+        cl = c(cl, populations$Country[populations$Continent %in% continents[continents %in% cl]])
 
         if (length(cl) == 0) {
             cl = country_list
@@ -143,6 +147,7 @@ shinyServer(function(input, output) {
             input_countries = input$countries
         }
         cl = strsplit(input_countries, ',')[[1]]
+        cl = c(cl, populations$Country[populations$Continent %in% continents[continents %in% cl]])
 
         if (length(cl) == 0) {
             cl = country_list
@@ -207,6 +212,7 @@ shinyServer(function(input, output) {
             input_countries = input$countries
         }
         cl = strsplit(input_countries, ',')[[1]]
+        cl = c(cl, populations$Country[populations$Continent %in% continents[continents %in% cl]])
 
         if (length(cl) == 0) {
             cl = country_list
@@ -214,9 +220,15 @@ shinyServer(function(input, output) {
             cl = selfn(country_list, cl)
         }
 
-        dat[[input$what]] %>% filter(Country %in% cl & Value > input$min) %>%
-            arrange(Country, Date) %>%
-            datatable()
+        datatable(
+            dat[[input$what]] %>%
+                filter(Country %in% cl & Value > input$min) %>%
+                arrange(Country, Date),
+            extensions='Buttons',
+            options = list(
+                dom = 'Bft',
+                buttons = c('copy', 'csv', 'excel'))
+        )
     })
 
     # UI ----
@@ -246,7 +258,7 @@ shinyServer(function(input, output) {
                     p(i18n()$t("Country_paragraph")),
 
                     textInput("countries", i18n()$t("Filter countries"),
-                              value="-China,South Korea,Diamond Princess"),
+                              value="Europe,US,China"),
 
                     p(i18n()$t("Threshold_paragraph")),
 
